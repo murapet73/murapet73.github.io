@@ -1,1 +1,95 @@
-<b> My Portfolio </b>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mariya Petkova – System administrator, CCNA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f4; --ink:#1b2a41; --muted:#56657a; --line:#c9d2dc; --accent:#2f5bea; --accent-ink:#ffffff;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#141b26; --ink:#e8edf3; --muted:#9aa8ba; --line:#2c3848; --accent:#7f9cff; --accent-ink:#141b26;}
+}
+:root[data-theme="dark"]{--bg:#141b26; --ink:#e8edf3; --muted:#9aa8ba; --line:#2c3848; --accent:#7f9cff; --accent-ink:#141b26;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:1.15rem;line-height:1.6}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem}
+header{display:flex;justify-content:space-between;gap:1rem;padding:1.5rem 0;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.5rem}
+nav{display:flex;gap:1.25rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{padding:5rem 0 4rem}
+h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:clamp(2.6rem,9vw,3rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 1.5rem}
+.hero p{max-width:34rem;color:var(--muted);font-size:1.3rem;margin:0 0 2rem}
+.btn{display:inline-block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:500;background:#1e90ff;color:var(--accent-ink);padding:.4rem .4rem;border-radius:.2rem;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:1.6rem;letter-spacing:-.01em;margin:0 0 1.5rem}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+.project{display:grid;grid-template-columns:4.5rem 1fr;gap:1rem;padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0}
+.project time{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--muted);padding-top:.25rem}
+.project h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.3rem;margin:0 0 .3rem}
+.project p{margin:0;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:0;padding:0;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1rem}
+.skills li{border:1px solid var(--line);border-radius:999px;padding:.3rem .9rem}
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--muted)}
+footer a{color:var(--ink)}
+@media (max-width:30rem){.project{grid-template-columns:1fr;gap:0}.hero{padding-top:3rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <strong>Mariya Petkova</strong>
+    <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>System administrator with 15+ years of experience.</h1>
+      <p>Helping the teams perform their daily routine promptly, on time, with a smile.</p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+
+    <section id="work">
+      <h2>Experience</h2>
+      <article class="project">
+        <time datetime="2014">2014 - 2023</time>
+        <div><h3>DXC Technology</h3><p>IT Services and Consulting Company - Security Analyst</p></div>
+      </article>
+      <article class="project">
+        <time datetime="2006">2006 - 2009</time>
+        <div><h3>Zetta Hosting Solutions</h3><p>Webhosting Company - System Administrator </p></div>
+      </article>
+      <article class="project">
+        <time datetime="1997">1997 - 2006</time>
+        <div><h3>TEA Ltd</h3><p>Internet Service Provider - Customer Support, System Administrator</p></div>
+      </article>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I have spent 15+ years resolving different IT issues. Let's build another happy & helpful team.</p>
+      <ul class="skills" aria-label="Skills">
+        <li>Linux Red Hat Enterprise Server</li><li>Windows Server</li><li>Cisco CCNA</li><li>Networking</li><li>Cyber Security</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <h2>Contact</h2>
+    <p>Have a project in mind? Email <a href="mailto:murapet73@gmail.com">me</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
